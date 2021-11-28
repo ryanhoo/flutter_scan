@@ -3,7 +3,6 @@ import 'dart:async';
 
 import 'package:flutter/services.dart';
 import 'package:scan/scan.dart';
-import 'package:images_picker/images_picker.dart';
 
 void main() {
   runApp(MyApp());
@@ -73,11 +72,11 @@ class _MyAppState extends State<MyApp> {
                 RaisedButton(
                   child: Text("parse from image"),
                   onPressed: () async {
-                    List<Media> res = await ImagesPicker.pick();
-                    if (res != null) {
-                      String qrcode = await Scan.parse(res[0].path);
-                      print(qrcode);
-                    }
+                    // List<Media> res = await ImagesPicker.pick();
+                    // if (res != null) {
+                    //   String qrcode = await Scan.parse(res[0].path);
+                    //   print(qrcode);
+                    // }
                   },
                 ),
               ],
